@@ -5,12 +5,17 @@ description: All code merged into `master` must pass the required set of securit
 for: pull_requests
 
 where:
-  - branch.name == "master"
+  - branch.name.endswith("-prod")
   - merged == true
+  - isPrivate  
   
 ensure:
   checks:
     required:
       - name: CodeQL scan
         conclusion: SUCCESS
+        severity: 
+          max: 7        
 
+      - name: Token scan
+        conclusion: SUCCESS
