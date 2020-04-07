@@ -5,7 +5,7 @@ description: Best practices for service engineering across MSFTAzure
 policies:
       
   prs: 
-    policy: /contoso/governance/pr-reviewers@77f0ed87
+    policy: /contoso/governance/pr-reviewers@1.0
     with:
       number-of-reviewers: 2
     
@@ -15,7 +15,7 @@ policies:
       approved: [ "{{ //github/.*/ }}", "{{ //contoso/.*/ }}", /partner1/coolAction@1.1]
       
   repo:
-    policy: /github/policies/repo-structure@3f4b61e2
+    policy: /github/policies/repo-structure@3.4
     with:
       allows-licenses: [MIT, Apache-2.0]
       wikis-allowed: false
